@@ -64,7 +64,7 @@ namespace VRPGSpellCreator_WinForms
             int effectTarget3 = GetEnumID(comboBox_Effect3Target.Text);
             int directTarget = GetEnumID(comboBox_DirectTarget.Text);
             int secondaryTarget = GetEnumID(comboBox_SecondaryTarget.Text);
-            string meleeAbility = "0";
+            string meleeAbility = checkBox_meleeRangeAbility.Checked ? "1" : "0";
             string rangeMin = textBox_MinRange.Text;
             string rangeMax = textBox_MaxRange.Text;
             string visualId = textBox_VisualID.Text;

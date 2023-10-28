@@ -96,6 +96,7 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
+            this.checkBox_meleeRangeAbility = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage_Spell.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -118,6 +119,7 @@
             // 
             // tabPage_Spell
             // 
+            this.tabPage_Spell.Controls.Add(this.checkBox_meleeRangeAbility);
             this.tabPage_Spell.Controls.Add(this.button_ImportSpellSQL);
             this.tabPage_Spell.Controls.Add(this.textBox_VisualID);
             this.tabPage_Spell.Controls.Add(this.button_CopySQL);
@@ -882,6 +884,16 @@
             this.label33.TabIndex = 50;
             this.label33.Text = "Base Points:";
             // 
+            // checkBox_meleeRangeAbility
+            // 
+            this.checkBox_meleeRangeAbility.AutoSize = true;
+            this.checkBox_meleeRangeAbility.Location = new System.Drawing.Point(679, 574);
+            this.checkBox_meleeRangeAbility.Name = "checkBox_meleeRangeAbility";
+            this.checkBox_meleeRangeAbility.Size = new System.Drawing.Size(230, 24);
+            this.checkBox_meleeRangeAbility.TabIndex = 34;
+            this.checkBox_meleeRangeAbility.Text = "Spawn visual effects on chest?";
+            this.checkBox_meleeRangeAbility.UseVisualStyleBackColor = true;
+            // 
             // SpellForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -977,5 +989,6 @@
         private Label label33;
         private TextBox textBox_VisualID;
         private Button button_ImportSpellSQL;
+        private CheckBox checkBox_meleeRangeAbility;
     }
 }
