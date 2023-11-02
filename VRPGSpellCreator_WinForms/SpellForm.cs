@@ -33,9 +33,12 @@ namespace VRPGSpellCreator_WinForms
             comboBox_SecondaryTarget.SelectedIndex = 0;
             comboBox_Animation.SelectedIndex = 0;
             comboBox_Effect1.SelectedIndex = 0;
+            comboBox_effect1Aura.SelectedIndex = 0;
             comboBox_Effect2.SelectedIndex = 0;
+            comboBox_effect2Aura.SelectedIndex = 0;
             comboBox_Effect2Target.SelectedIndex = 0;
             comboBox_Effect3.SelectedIndex = 0;
+            comboBox_effect3Aura.SelectedIndex = 0;
             comboBox_Effect3Target.SelectedIndex = 0;
         }
 
@@ -44,33 +47,53 @@ namespace VRPGSpellCreator_WinForms
             string spellId = textBox_SpellID.Text;
             string name = textBox_SpellName.Text;
             string description = textBox_SpellDesc.Text;
+            string tooltip = textBox_tooltip.Text;
             string iconId = textBox_IconID.Text;
             string cooldown = textBox_SpellCooldown.Text;
             string powerCost = textBox_PowerCost.Text;
+            string duration = textBox_duration.Text;
             int castType = GetEnumID(comboBox_CastType.Text);
-            int effect1 = GetEnumID(comboBox_Effect1.Text);
-            string effectBasePoints1 = textBox_Effect1bp.Text;
-            string effectDieSides1 = textBox_Effect1ds.Text;
-            string effectMiscValue1 = textBox_Effect1mv.Text;
-            int effect2 = GetEnumID(comboBox_Effect2.Text);
-            string effectBasePoints2 = textBox_Effect2bp.Text;
-            string effectDieSides2 = textBox_Effect2ds.Text;
-            string effectMiscValue2 = textBox_Effect2mv.Text;
-            int effectTarget2 = GetEnumID(comboBox_Effect2Target.Text);
-            int effect3 = GetEnumID(comboBox_Effect3.Text);
-            string effectBasePoints3 = textBox_Effect3bp.Text;
-            string effectDieSides3 = textBox_Effect3ds.Text;
-            string effectMiscValue3 = textBox_Effect3mv.Text;
-            int effectTarget3 = GetEnumID(comboBox_Effect3Target.Text);
             int directTarget = GetEnumID(comboBox_DirectTarget.Text);
             int secondaryTarget = GetEnumID(comboBox_SecondaryTarget.Text);
+            
+            int effect1 = GetEnumID(comboBox_Effect1.Text);
+            int effect2 = GetEnumID(comboBox_Effect2.Text);
+            int effect3 = GetEnumID(comboBox_Effect3.Text);
+
+            string effectBasePoints1 = textBox_Effect1bp.Text;
+            string effectBasePoints2 = textBox_Effect2bp.Text;
+            string effectBasePoints3 = textBox_Effect3bp.Text;
+
+            string effectDieSides1 = textBox_Effect1ds.Text;
+            string effectDieSides2 = textBox_Effect2ds.Text;
+            string effectDieSides3 = textBox_Effect3ds.Text;
+
+            string effectMiscValue1 = textBox_Effect1mv.Text;
+            string effectMiscValue2 = textBox_Effect2mv.Text;
+            string effectMiscValue3 = textBox_Effect3mv.Text;
+
+            int effectApplyAura1 = GetEnumID(comboBox_effect1Aura.Text);
+            int effectApplyAura2 = GetEnumID(comboBox_effect2Aura.Text);
+            int effectApplyAura3 = GetEnumID(comboBox_effect3Aura.Text);
+
+            int effectTarget2 = GetEnumID(comboBox_Effect2Target.Text);
+            int effectTarget3 = GetEnumID(comboBox_Effect3Target.Text);
+
             string meleeAbility = checkBox_meleeRangeAbility.Checked ? "1" : "0";
             string rangeMin = textBox_MinRange.Text;
             string rangeMax = textBox_MaxRange.Text;
-            string visualId = textBox_VisualID.Text;
+
+            string visual1 = textBox_Visual1.Text;
+            string visual2 = textBox_Visual2.Text;
+            string auraStartVisual = textBox_auraStartVisual.Text;
+            string auraVisual = textBox_auraVisual.Text;
+
+            string hiddenAura = checkBox_hiddenAura.Checked ? "1" : "0";
+            string harmfulAura = checkBox_harmfulAura.Checked ? "1" : "0";
+
             int castAnimation = GetEnumID(comboBox_Animation.Text);
 
-            string sql = $"REPLACE INTO \"main\".\"spell\" (\"ID\", \"Name\", \"Description\", \"IconID\", \"Cooldown\", \"PowerCost\", \"CastType\", \"Effect1\", \"EffectBasePoints1\", \"EffectDieSides1\", \"EffectMiscValue1\", \"Effect2\", \"EffectBasePoints2\", \"EffectDieSides2\", \"EffectMiscValue2\", \"EffectTarget2\", \"Effect3\", \"EffectBasePoints3\", \"EffectDieSides3\", \"EffectMiscValue3\", \"EffectTarget3\", \"DirectTarget\", \"SecondaryTarget\", \"MeleeAbility\", \"Range_Min\", \"Range_Max\", \"VisualID\", \"CastAnimation\") VALUES ('{spellId}', '{name}', '{description}', '{iconId}', '{cooldown}', '{powerCost}', '{castType}', '{effect1}', '{effectBasePoints1}', '{effectDieSides1}', '{effectMiscValue1}', '{effect2}', '{effectBasePoints2}', '{effectDieSides2}', '{effectMiscValue2}', '{effectTarget2}', '{effect3}', '{effectBasePoints3}', '{effectDieSides3}', '{effectMiscValue3}', '{effectTarget3}', '{directTarget}', '{secondaryTarget}', '{meleeAbility}', '{rangeMin}', '{rangeMax}', '{visualId}', '{castAnimation}');";
+            string sql = $"REPLACE INTO \"main\".\"spell\" (\"ID\", \"Name\", \"Description\", \"Tooltip\", \"IconID\", \"Cooldown\", \"PowerCost\", \"Duration\", \"CastType\", \"DirectTarget\", \"SecondaryTarget\", \"Effect1\", \"Effect2\", \"Effect3\", \"EffectBasePoints1\", \"EffectBasePoints2\", \"EffectBasePoints3\", \"EffectDieSides1\", \"EffectDieSides2\", \"EffectDieSides3\", \"EffectMiscValue1\", \"EffectMiscValue2\", \"EffectMiscValue3\", \"EffectApplyAura1\", \"EffectApplyAura2\", \"EffectApplyAura3\", \"EffectTarget2\", \"EffectTarget3\", \"Range_Min\", \"Range_Max\", \"MeleeAbility\", \"Visual1\", \"Visual2\", \"AuraStartVisual\", \"AuraVisual\", \"HiddenAura\", \"HarmfulAura\", \"CastAnimation\") VALUES ('{spellId}', '{name}', '{description}', '{tooltip}', '{iconId}', '{cooldown}', '{powerCost}', '{duration}', '{castType}', '{directTarget}', '{secondaryTarget}', '{effect1}', '{effect2}', '{effect3}', '{effectBasePoints1}', '{effectBasePoints2}', '{effectBasePoints3}', '{effectDieSides1}', '{effectDieSides2}', '{effectDieSides3}', '{effectMiscValue1}', '{effectMiscValue2}', '{effectMiscValue3}', '{effectApplyAura1}', '{effectApplyAura2}', '{effectApplyAura3}', '{effectTarget2}', '{effectTarget3}', '{rangeMin}', '{rangeMax}', '{meleeAbility}', '{visual1}', '{visual2}', '{auraStartVisual}', '{auraVisual}', '{hiddenAura}', '{harmfulAura}', '{castAnimation}');";
             return sql;
         }
 

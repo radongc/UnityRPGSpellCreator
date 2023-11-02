@@ -30,8 +30,22 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_Spell = new System.Windows.Forms.TabPage();
+            this.textBox_tooltip = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.textBox_duration = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.checkBox_harmfulAura = new System.Windows.Forms.CheckBox();
+            this.checkBox_hiddenAura = new System.Windows.Forms.CheckBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.textBox_auraVisual = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.textBox_auraStartVisual = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.textBox_Visual2 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.checkBox_meleeRangeAbility = new System.Windows.Forms.CheckBox();
             this.button_ImportSpellSQL = new System.Windows.Forms.Button();
-            this.textBox_VisualID = new System.Windows.Forms.TextBox();
+            this.textBox_Visual1 = new System.Windows.Forms.TextBox();
             this.button_CopySQL = new System.Windows.Forms.Button();
             this.textBox_SpellID = new System.Windows.Forms.TextBox();
             this.textBox_SpellName = new System.Windows.Forms.TextBox();
@@ -63,6 +77,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage_Effect1 = new System.Windows.Forms.TabPage();
+            this.comboBox_effect1Aura = new System.Windows.Forms.ComboBox();
+            this.label38 = new System.Windows.Forms.Label();
             this.comboBox_Effect1 = new System.Windows.Forms.ComboBox();
             this.textBox_Effect1bp = new System.Windows.Forms.TextBox();
             this.textBox_Effect1ds = new System.Windows.Forms.TextBox();
@@ -73,6 +89,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.tabPage_Effect2 = new System.Windows.Forms.TabPage();
+            this.comboBox_effect2Aura = new System.Windows.Forms.ComboBox();
+            this.label39 = new System.Windows.Forms.Label();
             this.comboBox_Effect2Target = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
             this.comboBox_Effect2 = new System.Windows.Forms.ComboBox();
@@ -85,6 +103,8 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.tabPage_Effect3 = new System.Windows.Forms.TabPage();
+            this.comboBox_effect3Aura = new System.Windows.Forms.ComboBox();
+            this.label40 = new System.Windows.Forms.Label();
             this.comboBox_Effect3Target = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.comboBox_Effect3 = new System.Windows.Forms.ComboBox();
@@ -96,7 +116,6 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.checkBox_meleeRangeAbility = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage_Spell.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -114,14 +133,27 @@
             this.tabControl1.Location = new System.Drawing.Point(-1, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(948, 698);
+            this.tabControl1.Size = new System.Drawing.Size(948, 947);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage_Spell
             // 
+            this.tabPage_Spell.Controls.Add(this.textBox_tooltip);
+            this.tabPage_Spell.Controls.Add(this.label42);
+            this.tabPage_Spell.Controls.Add(this.textBox_duration);
+            this.tabPage_Spell.Controls.Add(this.label41);
+            this.tabPage_Spell.Controls.Add(this.checkBox_harmfulAura);
+            this.tabPage_Spell.Controls.Add(this.checkBox_hiddenAura);
+            this.tabPage_Spell.Controls.Add(this.label37);
+            this.tabPage_Spell.Controls.Add(this.textBox_auraVisual);
+            this.tabPage_Spell.Controls.Add(this.label36);
+            this.tabPage_Spell.Controls.Add(this.textBox_auraStartVisual);
+            this.tabPage_Spell.Controls.Add(this.label35);
+            this.tabPage_Spell.Controls.Add(this.textBox_Visual2);
+            this.tabPage_Spell.Controls.Add(this.label34);
             this.tabPage_Spell.Controls.Add(this.checkBox_meleeRangeAbility);
             this.tabPage_Spell.Controls.Add(this.button_ImportSpellSQL);
-            this.tabPage_Spell.Controls.Add(this.textBox_VisualID);
+            this.tabPage_Spell.Controls.Add(this.textBox_Visual1);
             this.tabPage_Spell.Controls.Add(this.button_CopySQL);
             this.tabPage_Spell.Controls.Add(this.textBox_SpellID);
             this.tabPage_Spell.Controls.Add(this.textBox_SpellName);
@@ -155,10 +187,141 @@
             this.tabPage_Spell.Location = new System.Drawing.Point(4, 29);
             this.tabPage_Spell.Name = "tabPage_Spell";
             this.tabPage_Spell.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Spell.Size = new System.Drawing.Size(940, 665);
+            this.tabPage_Spell.Size = new System.Drawing.Size(940, 914);
             this.tabPage_Spell.TabIndex = 0;
             this.tabPage_Spell.Text = "Spell";
             this.tabPage_Spell.UseVisualStyleBackColor = true;
+            // 
+            // textBox_tooltip
+            // 
+            this.textBox_tooltip.Location = new System.Drawing.Point(679, 125);
+            this.textBox_tooltip.Name = "textBox_tooltip";
+            this.textBox_tooltip.Size = new System.Drawing.Size(215, 27);
+            this.textBox_tooltip.TabIndex = 46;
+            this.textBox_tooltip.Text = "0";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label42.Location = new System.Drawing.Point(180, 131);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(61, 21);
+            this.label42.TabIndex = 47;
+            this.label42.Text = "Tooltip:";
+            // 
+            // textBox_duration
+            // 
+            this.textBox_duration.Location = new System.Drawing.Point(679, 688);
+            this.textBox_duration.Name = "textBox_duration";
+            this.textBox_duration.Size = new System.Drawing.Size(215, 27);
+            this.textBox_duration.TabIndex = 44;
+            this.textBox_duration.Text = "0";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label41.Location = new System.Drawing.Point(178, 691);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(112, 21);
+            this.label41.TabIndex = 45;
+            this.label41.Text = "Aura Duration:";
+            // 
+            // checkBox_harmfulAura
+            // 
+            this.checkBox_harmfulAura.AutoSize = true;
+            this.checkBox_harmfulAura.Location = new System.Drawing.Point(679, 817);
+            this.checkBox_harmfulAura.Name = "checkBox_harmfulAura";
+            this.checkBox_harmfulAura.Size = new System.Drawing.Size(120, 24);
+            this.checkBox_harmfulAura.TabIndex = 43;
+            this.checkBox_harmfulAura.Text = "Harmful Aura";
+            this.checkBox_harmfulAura.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_hiddenAura
+            // 
+            this.checkBox_hiddenAura.AutoSize = true;
+            this.checkBox_hiddenAura.Location = new System.Drawing.Point(679, 787);
+            this.checkBox_hiddenAura.Name = "checkBox_hiddenAura";
+            this.checkBox_hiddenAura.Size = new System.Drawing.Size(115, 24);
+            this.checkBox_hiddenAura.TabIndex = 42;
+            this.checkBox_hiddenAura.Text = "Hidden Aura";
+            this.checkBox_hiddenAura.UseVisualStyleBackColor = true;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label37.Location = new System.Drawing.Point(458, 662);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(121, 21);
+            this.label37.TabIndex = 41;
+            this.label37.Text = "Aura Mechanics";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox_auraVisual
+            // 
+            this.textBox_auraVisual.Location = new System.Drawing.Point(679, 754);
+            this.textBox_auraVisual.Name = "textBox_auraVisual";
+            this.textBox_auraVisual.Size = new System.Drawing.Size(215, 27);
+            this.textBox_auraVisual.TabIndex = 39;
+            this.textBox_auraVisual.Text = "0";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label36.Location = new System.Drawing.Point(178, 757);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(94, 21);
+            this.label36.TabIndex = 40;
+            this.label36.Text = "Aura Visual:";
+            // 
+            // textBox_auraStartVisual
+            // 
+            this.textBox_auraStartVisual.Location = new System.Drawing.Point(679, 721);
+            this.textBox_auraStartVisual.Name = "textBox_auraStartVisual";
+            this.textBox_auraStartVisual.Size = new System.Drawing.Size(215, 27);
+            this.textBox_auraStartVisual.TabIndex = 37;
+            this.textBox_auraStartVisual.Text = "0";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label35.Location = new System.Drawing.Point(178, 724);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(132, 21);
+            this.label35.TabIndex = 38;
+            this.label35.Text = "Aura Start Visual:";
+            // 
+            // textBox_Visual2
+            // 
+            this.textBox_Visual2.Location = new System.Drawing.Point(679, 552);
+            this.textBox_Visual2.Name = "textBox_Visual2";
+            this.textBox_Visual2.Size = new System.Drawing.Size(215, 27);
+            this.textBox_Visual2.TabIndex = 35;
+            this.textBox_Visual2.Text = "0";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label34.Location = new System.Drawing.Point(178, 555);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(70, 21);
+            this.label34.TabIndex = 36;
+            this.label34.Text = "Visual 2:";
+            // 
+            // checkBox_meleeRangeAbility
+            // 
+            this.checkBox_meleeRangeAbility.AutoSize = true;
+            this.checkBox_meleeRangeAbility.Location = new System.Drawing.Point(679, 627);
+            this.checkBox_meleeRangeAbility.Name = "checkBox_meleeRangeAbility";
+            this.checkBox_meleeRangeAbility.Size = new System.Drawing.Size(230, 24);
+            this.checkBox_meleeRangeAbility.TabIndex = 34;
+            this.checkBox_meleeRangeAbility.Text = "Spawn visual effects on chest?";
+            this.checkBox_meleeRangeAbility.UseVisualStyleBackColor = true;
             // 
             // button_ImportSpellSQL
             // 
@@ -170,17 +333,17 @@
             this.button_ImportSpellSQL.UseVisualStyleBackColor = true;
             this.button_ImportSpellSQL.Click += new System.EventHandler(this.button_ImportSpellSQL_Click);
             // 
-            // textBox_VisualID
+            // textBox_Visual1
             // 
-            this.textBox_VisualID.Location = new System.Drawing.Point(679, 503);
-            this.textBox_VisualID.Name = "textBox_VisualID";
-            this.textBox_VisualID.Size = new System.Drawing.Size(215, 27);
-            this.textBox_VisualID.TabIndex = 11;
-            this.textBox_VisualID.Text = "0";
+            this.textBox_Visual1.Location = new System.Drawing.Point(679, 519);
+            this.textBox_Visual1.Name = "textBox_Visual1";
+            this.textBox_Visual1.Size = new System.Drawing.Size(215, 27);
+            this.textBox_Visual1.TabIndex = 11;
+            this.textBox_Visual1.Text = "0";
             // 
             // button_CopySQL
             // 
-            this.button_CopySQL.Location = new System.Drawing.Point(679, 608);
+            this.button_CopySQL.Location = new System.Drawing.Point(679, 853);
             this.button_CopySQL.Name = "button_CopySQL";
             this.button_CopySQL.Size = new System.Drawing.Size(215, 45);
             this.button_CopySQL.TabIndex = 30;
@@ -214,7 +377,7 @@
             // 
             // textBox_IconID
             // 
-            this.textBox_IconID.Location = new System.Drawing.Point(679, 125);
+            this.textBox_IconID.Location = new System.Drawing.Point(679, 158);
             this.textBox_IconID.Name = "textBox_IconID";
             this.textBox_IconID.Size = new System.Drawing.Size(215, 27);
             this.textBox_IconID.TabIndex = 3;
@@ -223,7 +386,7 @@
             // 
             // textBox_SpellCooldown
             // 
-            this.textBox_SpellCooldown.Location = new System.Drawing.Point(679, 176);
+            this.textBox_SpellCooldown.Location = new System.Drawing.Point(679, 247);
             this.textBox_SpellCooldown.Name = "textBox_SpellCooldown";
             this.textBox_SpellCooldown.Size = new System.Drawing.Size(215, 27);
             this.textBox_SpellCooldown.TabIndex = 4;
@@ -231,7 +394,7 @@
             // 
             // textBox_PowerCost
             // 
-            this.textBox_PowerCost.Location = new System.Drawing.Point(679, 208);
+            this.textBox_PowerCost.Location = new System.Drawing.Point(679, 279);
             this.textBox_PowerCost.Name = "textBox_PowerCost";
             this.textBox_PowerCost.Size = new System.Drawing.Size(215, 27);
             this.textBox_PowerCost.TabIndex = 5;
@@ -246,14 +409,14 @@
             "NEXT_ATTACK_MODIFIER - 0",
             "INSTANT_ATTACK - 1",
             "INSTANT_CAST - 2"});
-            this.comboBox_CastType.Location = new System.Drawing.Point(679, 239);
+            this.comboBox_CastType.Location = new System.Drawing.Point(679, 310);
             this.comboBox_CastType.Name = "comboBox_CastType";
             this.comboBox_CastType.Size = new System.Drawing.Size(215, 28);
             this.comboBox_CastType.TabIndex = 6;
             // 
             // textBox_MinRange
             // 
-            this.textBox_MinRange.Location = new System.Drawing.Point(679, 271);
+            this.textBox_MinRange.Location = new System.Drawing.Point(679, 342);
             this.textBox_MinRange.Name = "textBox_MinRange";
             this.textBox_MinRange.Size = new System.Drawing.Size(215, 27);
             this.textBox_MinRange.TabIndex = 7;
@@ -261,7 +424,7 @@
             // 
             // textBox_MaxRange
             // 
-            this.textBox_MaxRange.Location = new System.Drawing.Point(679, 303);
+            this.textBox_MaxRange.Location = new System.Drawing.Point(679, 374);
             this.textBox_MaxRange.Name = "textBox_MaxRange";
             this.textBox_MaxRange.Size = new System.Drawing.Size(215, 27);
             this.textBox_MaxRange.TabIndex = 8;
@@ -277,7 +440,7 @@
             "HOSTILE - 2",
             "ALL_UNITS - 3",
             "AREA - 4"});
-            this.comboBox_DirectTarget.Location = new System.Drawing.Point(679, 364);
+            this.comboBox_DirectTarget.Location = new System.Drawing.Point(679, 407);
             this.comboBox_DirectTarget.Name = "comboBox_DirectTarget";
             this.comboBox_DirectTarget.Size = new System.Drawing.Size(215, 28);
             this.comboBox_DirectTarget.TabIndex = 9;
@@ -292,7 +455,7 @@
             "HOSTILE - 2",
             "ALL_UNITS - 3",
             "ALL_BUT_SELF - 4"});
-            this.comboBox_SecondaryTarget.Location = new System.Drawing.Point(679, 399);
+            this.comboBox_SecondaryTarget.Location = new System.Drawing.Point(679, 442);
             this.comboBox_SecondaryTarget.Name = "comboBox_SecondaryTarget";
             this.comboBox_SecondaryTarget.Size = new System.Drawing.Size(215, 28);
             this.comboBox_SecondaryTarget.TabIndex = 10;
@@ -305,7 +468,7 @@
             "MELEE - 0",
             "SPELL - 1",
             "NONE - 2"});
-            this.comboBox_Animation.Location = new System.Drawing.Point(679, 534);
+            this.comboBox_Animation.Location = new System.Drawing.Point(679, 585);
             this.comboBox_Animation.Name = "comboBox_Animation";
             this.comboBox_Animation.Size = new System.Drawing.Size(215, 28);
             this.comboBox_Animation.TabIndex = 12;
@@ -314,7 +477,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(178, 540);
+            this.label15.Location = new System.Drawing.Point(178, 591);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(87, 21);
             this.label15.TabIndex = 16;
@@ -324,17 +487,17 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(178, 506);
+            this.label16.Location = new System.Drawing.Point(178, 522);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(75, 21);
+            this.label16.Size = new System.Drawing.Size(70, 21);
             this.label16.TabIndex = 15;
-            this.label16.Text = "Visual ID:";
+            this.label16.Text = "Visual 1:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(468, 444);
+            this.label14.Location = new System.Drawing.Point(468, 487);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(96, 21);
             this.label14.TabIndex = 14;
@@ -345,7 +508,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(180, 309);
+            this.label12.Location = new System.Drawing.Point(180, 380);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(91, 21);
             this.label12.TabIndex = 13;
@@ -355,7 +518,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(180, 277);
+            this.label13.Location = new System.Drawing.Point(180, 348);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(89, 21);
             this.label13.TabIndex = 12;
@@ -365,7 +528,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(180, 405);
+            this.label11.Location = new System.Drawing.Point(180, 448);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(134, 21);
             this.label11.TabIndex = 11;
@@ -375,7 +538,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(180, 370);
+            this.label10.Location = new System.Drawing.Point(180, 413);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(103, 21);
             this.label10.TabIndex = 10;
@@ -385,7 +548,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(180, 245);
+            this.label9.Location = new System.Drawing.Point(180, 316);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(81, 21);
             this.label9.TabIndex = 9;
@@ -395,7 +558,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(180, 214);
+            this.label8.Location = new System.Drawing.Point(180, 285);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(94, 21);
             this.label8.TabIndex = 8;
@@ -405,7 +568,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(459, 147);
+            this.label7.Location = new System.Drawing.Point(459, 206);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 21);
             this.label7.TabIndex = 7;
@@ -426,7 +589,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(180, 184);
+            this.label5.Location = new System.Drawing.Point(180, 255);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 21);
             this.label5.TabIndex = 5;
@@ -436,7 +599,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(180, 131);
+            this.label4.Location = new System.Drawing.Point(180, 164);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 21);
             this.label4.TabIndex = 4;
@@ -484,6 +647,8 @@
             // 
             // tabPage_Effect1
             // 
+            this.tabPage_Effect1.Controls.Add(this.comboBox_effect1Aura);
+            this.tabPage_Effect1.Controls.Add(this.label38);
             this.tabPage_Effect1.Controls.Add(this.comboBox_Effect1);
             this.tabPage_Effect1.Controls.Add(this.textBox_Effect1bp);
             this.tabPage_Effect1.Controls.Add(this.textBox_Effect1ds);
@@ -496,10 +661,34 @@
             this.tabPage_Effect1.Location = new System.Drawing.Point(4, 29);
             this.tabPage_Effect1.Name = "tabPage_Effect1";
             this.tabPage_Effect1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Effect1.Size = new System.Drawing.Size(940, 665);
+            this.tabPage_Effect1.Size = new System.Drawing.Size(940, 914);
             this.tabPage_Effect1.TabIndex = 1;
             this.tabPage_Effect1.Text = "Effect 1";
             this.tabPage_Effect1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_effect1Aura
+            // 
+            this.comboBox_effect1Aura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_effect1Aura.FormattingEnabled = true;
+            this.comboBox_effect1Aura.Items.AddRange(new object[] {
+            "AURA_NONE - 0",
+            "AURA_MOD_STAT - 1",
+            "AURA_PERIODIC_DAMAGE - 2",
+            "AURA_PERIODIC_HEAL - 3"});
+            this.comboBox_effect1Aura.Location = new System.Drawing.Point(617, 280);
+            this.comboBox_effect1Aura.Name = "comboBox_effect1Aura";
+            this.comboBox_effect1Aura.Size = new System.Drawing.Size(215, 28);
+            this.comboBox_effect1Aura.TabIndex = 35;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label38.Location = new System.Drawing.Point(118, 283);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(90, 21);
+            this.label38.TabIndex = 36;
+            this.label38.Text = "Aura Effect:";
             // 
             // comboBox_Effect1
             // 
@@ -509,14 +698,15 @@
             "NONE - 0",
             "DAMAGE - 1",
             "HEAL - 2",
-            "APPLY_BUFF - 3",
+            "UNUSED_APPLY_BUFF - 3",
             "SUMMON_ENTITY - 4",
             "ATK_DAMAGE_EXTRA - 5",
             "ATK_DAMAGE_PCT - 6",
             "INSTAKILL - 7",
             "TELEPORT - 8",
             "FORCE_ATTACK - 9",
-            "RECHARGE_POWER - 10"});
+            "RECHARGE_POWER - 10",
+            "APPLY_AURA - 11"});
             this.comboBox_Effect1.Location = new System.Drawing.Point(617, 147);
             this.comboBox_Effect1.Name = "comboBox_Effect1";
             this.comboBox_Effect1.Size = new System.Drawing.Size(215, 28);
@@ -580,11 +770,11 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(118, 154);
+            this.label20.Location = new System.Drawing.Point(119, 154);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 21);
+            this.label20.Size = new System.Drawing.Size(53, 21);
             this.label20.TabIndex = 31;
-            this.label20.Text = "Effect";
+            this.label20.Text = "Effect:";
             // 
             // label21
             // 
@@ -598,6 +788,8 @@
             // 
             // tabPage_Effect2
             // 
+            this.tabPage_Effect2.Controls.Add(this.comboBox_effect2Aura);
+            this.tabPage_Effect2.Controls.Add(this.label39);
             this.tabPage_Effect2.Controls.Add(this.comboBox_Effect2Target);
             this.tabPage_Effect2.Controls.Add(this.label27);
             this.tabPage_Effect2.Controls.Add(this.comboBox_Effect2);
@@ -611,10 +803,34 @@
             this.tabPage_Effect2.Controls.Add(this.label26);
             this.tabPage_Effect2.Location = new System.Drawing.Point(4, 29);
             this.tabPage_Effect2.Name = "tabPage_Effect2";
-            this.tabPage_Effect2.Size = new System.Drawing.Size(940, 665);
+            this.tabPage_Effect2.Size = new System.Drawing.Size(940, 914);
             this.tabPage_Effect2.TabIndex = 2;
             this.tabPage_Effect2.Text = "Effect 2";
             this.tabPage_Effect2.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_effect2Aura
+            // 
+            this.comboBox_effect2Aura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_effect2Aura.FormattingEnabled = true;
+            this.comboBox_effect2Aura.Items.AddRange(new object[] {
+            "AURA_NONE - 0",
+            "AURA_MOD_STAT - 1",
+            "AURA_PERIODIC_DAMAGE - 2",
+            "AURA_PERIODIC_HEAL - 3"});
+            this.comboBox_effect2Aura.Location = new System.Drawing.Point(617, 280);
+            this.comboBox_effect2Aura.Name = "comboBox_effect2Aura";
+            this.comboBox_effect2Aura.Size = new System.Drawing.Size(215, 28);
+            this.comboBox_effect2Aura.TabIndex = 49;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label39.Location = new System.Drawing.Point(118, 283);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(90, 21);
+            this.label39.TabIndex = 50;
+            this.label39.Text = "Aura Effect:";
             // 
             // comboBox_Effect2Target
             // 
@@ -630,7 +846,7 @@
             "TARGET_BEAST - 6",
             "TARGET_DEMON - 7",
             "TARGET_UNDEAD - 8"});
-            this.comboBox_Effect2Target.Location = new System.Drawing.Point(617, 280);
+            this.comboBox_Effect2Target.Location = new System.Drawing.Point(617, 314);
             this.comboBox_Effect2Target.Name = "comboBox_Effect2Target";
             this.comboBox_Effect2Target.Size = new System.Drawing.Size(215, 28);
             this.comboBox_Effect2Target.TabIndex = 21;
@@ -639,11 +855,11 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label27.Location = new System.Drawing.Point(118, 283);
+            this.label27.Location = new System.Drawing.Point(118, 317);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(95, 21);
+            this.label27.Size = new System.Drawing.Size(100, 21);
             this.label27.TabIndex = 48;
-            this.label27.Text = "Effect Target";
+            this.label27.Text = "Effect Target:";
             // 
             // comboBox_Effect2
             // 
@@ -653,14 +869,15 @@
             "NONE - 0",
             "DAMAGE - 1",
             "HEAL - 2",
-            "APPLY_BUFF - 3",
+            "UNUSED_APPLY_BUFF - 3",
             "SUMMON_ENTITY - 4",
             "ATK_DAMAGE_EXTRA - 5",
             "ATK_DAMAGE_PCT - 6",
             "INSTAKILL - 7",
             "TELEPORT - 8",
             "FORCE_ATTACK - 9",
-            "RECHARGE_POWER - 10"});
+            "RECHARGE_POWER - 10",
+            "APPLY_AURA - 11"});
             this.comboBox_Effect2.Location = new System.Drawing.Point(617, 147);
             this.comboBox_Effect2.Name = "comboBox_Effect2";
             this.comboBox_Effect2.Size = new System.Drawing.Size(215, 28);
@@ -724,11 +941,11 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label25.Location = new System.Drawing.Point(118, 154);
+            this.label25.Location = new System.Drawing.Point(119, 154);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(48, 21);
+            this.label25.Size = new System.Drawing.Size(53, 21);
             this.label25.TabIndex = 40;
-            this.label25.Text = "Effect";
+            this.label25.Text = "Effect:";
             // 
             // label26
             // 
@@ -742,6 +959,8 @@
             // 
             // tabPage_Effect3
             // 
+            this.tabPage_Effect3.Controls.Add(this.comboBox_effect3Aura);
+            this.tabPage_Effect3.Controls.Add(this.label40);
             this.tabPage_Effect3.Controls.Add(this.comboBox_Effect3Target);
             this.tabPage_Effect3.Controls.Add(this.label28);
             this.tabPage_Effect3.Controls.Add(this.comboBox_Effect3);
@@ -755,10 +974,34 @@
             this.tabPage_Effect3.Controls.Add(this.label33);
             this.tabPage_Effect3.Location = new System.Drawing.Point(4, 29);
             this.tabPage_Effect3.Name = "tabPage_Effect3";
-            this.tabPage_Effect3.Size = new System.Drawing.Size(940, 665);
+            this.tabPage_Effect3.Size = new System.Drawing.Size(940, 914);
             this.tabPage_Effect3.TabIndex = 3;
             this.tabPage_Effect3.Text = "Effect 3";
             this.tabPage_Effect3.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_effect3Aura
+            // 
+            this.comboBox_effect3Aura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_effect3Aura.FormattingEnabled = true;
+            this.comboBox_effect3Aura.Items.AddRange(new object[] {
+            "AURA_NONE - 0",
+            "AURA_MOD_STAT - 1",
+            "AURA_PERIODIC_DAMAGE - 2",
+            "AURA_PERIODIC_HEAL - 3"});
+            this.comboBox_effect3Aura.Location = new System.Drawing.Point(617, 280);
+            this.comboBox_effect3Aura.Name = "comboBox_effect3Aura";
+            this.comboBox_effect3Aura.Size = new System.Drawing.Size(215, 28);
+            this.comboBox_effect3Aura.TabIndex = 60;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label40.Location = new System.Drawing.Point(118, 283);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(90, 21);
+            this.label40.TabIndex = 61;
+            this.label40.Text = "Aura Effect:";
             // 
             // comboBox_Effect3Target
             // 
@@ -774,7 +1017,7 @@
             "TARGET_BEAST - 6",
             "TARGET_DEMON - 7",
             "TARGET_UNDEAD - 8"});
-            this.comboBox_Effect3Target.Location = new System.Drawing.Point(617, 280);
+            this.comboBox_Effect3Target.Location = new System.Drawing.Point(617, 314);
             this.comboBox_Effect3Target.Name = "comboBox_Effect3Target";
             this.comboBox_Effect3Target.Size = new System.Drawing.Size(215, 28);
             this.comboBox_Effect3Target.TabIndex = 26;
@@ -783,11 +1026,11 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label28.Location = new System.Drawing.Point(118, 283);
+            this.label28.Location = new System.Drawing.Point(118, 317);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(95, 21);
+            this.label28.Size = new System.Drawing.Size(100, 21);
             this.label28.TabIndex = 59;
-            this.label28.Text = "Effect Target";
+            this.label28.Text = "Effect Target:";
             // 
             // comboBox_Effect3
             // 
@@ -797,14 +1040,15 @@
             "NONE - 0",
             "DAMAGE - 1",
             "HEAL - 2",
-            "APPLY_BUFF - 3",
+            "UNUSED_APPLY_BUFF - 3",
             "SUMMON_ENTITY - 4",
             "ATK_DAMAGE_EXTRA - 5",
             "ATK_DAMAGE_PCT - 6",
             "INSTAKILL - 7",
             "TELEPORT - 8",
             "FORCE_ATTACK - 9",
-            "RECHARGE_POWER - 10"});
+            "RECHARGE_POWER - 10",
+            "APPLY_AURA - 11"});
             this.comboBox_Effect3.Location = new System.Drawing.Point(617, 147);
             this.comboBox_Effect3.Name = "comboBox_Effect3";
             this.comboBox_Effect3.Size = new System.Drawing.Size(215, 28);
@@ -868,11 +1112,11 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label32.Location = new System.Drawing.Point(118, 154);
+            this.label32.Location = new System.Drawing.Point(119, 154);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(48, 21);
+            this.label32.Size = new System.Drawing.Size(53, 21);
             this.label32.TabIndex = 51;
-            this.label32.Text = "Effect";
+            this.label32.Text = "Effect:";
             // 
             // label33
             // 
@@ -884,21 +1128,11 @@
             this.label33.TabIndex = 50;
             this.label33.Text = "Base Points:";
             // 
-            // checkBox_meleeRangeAbility
-            // 
-            this.checkBox_meleeRangeAbility.AutoSize = true;
-            this.checkBox_meleeRangeAbility.Location = new System.Drawing.Point(679, 574);
-            this.checkBox_meleeRangeAbility.Name = "checkBox_meleeRangeAbility";
-            this.checkBox_meleeRangeAbility.Size = new System.Drawing.Size(230, 24);
-            this.checkBox_meleeRangeAbility.TabIndex = 34;
-            this.checkBox_meleeRangeAbility.Text = "Spawn visual effects on chest?";
-            this.checkBox_meleeRangeAbility.UseVisualStyleBackColor = true;
-            // 
             // SpellForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 694);
+            this.ClientSize = new System.Drawing.Size(947, 945);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -987,8 +1221,27 @@
         private Label label31;
         private Label label32;
         private Label label33;
-        private TextBox textBox_VisualID;
+        private TextBox textBox_Visual1;
         private Button button_ImportSpellSQL;
         private CheckBox checkBox_meleeRangeAbility;
+        private TextBox textBox_Visual2;
+        private Label label34;
+        private CheckBox checkBox_harmfulAura;
+        private CheckBox checkBox_hiddenAura;
+        private Label label37;
+        private TextBox textBox_auraVisual;
+        private Label label36;
+        private TextBox textBox_auraStartVisual;
+        private Label label35;
+        private ComboBox comboBox_effect1Aura;
+        private Label label38;
+        private ComboBox comboBox_effect2Aura;
+        private Label label39;
+        private ComboBox comboBox_effect3Aura;
+        private Label label40;
+        private TextBox textBox_tooltip;
+        private Label label42;
+        private TextBox textBox_duration;
+        private Label label41;
     }
 }
