@@ -674,7 +674,10 @@
             "AURA_NONE - 0",
             "AURA_MOD_STAT - 1",
             "AURA_PERIODIC_DAMAGE - 2",
-            "AURA_PERIODIC_HEAL - 3"});
+            "AURA_PERIODIC_HEAL - 3",
+            "AURA_MOD_MOVEMENT_SPEED - 4",
+            "AURA_MOD_DMG_TAKEN - 5",
+            "AURA_MOD_STUN - 6"});
             this.comboBox_effect1Aura.Location = new System.Drawing.Point(617, 280);
             this.comboBox_effect1Aura.Name = "comboBox_effect1Aura";
             this.comboBox_effect1Aura.Size = new System.Drawing.Size(215, 28);
@@ -816,7 +819,10 @@
             "AURA_NONE - 0",
             "AURA_MOD_STAT - 1",
             "AURA_PERIODIC_DAMAGE - 2",
-            "AURA_PERIODIC_HEAL - 3"});
+            "AURA_PERIODIC_HEAL - 3",
+            "AURA_MOD_MOVEMENT_SPEED - 4",
+            "AURA_MOD_DMG_TAKEN - 5",
+            "AURA_MOD_STUN - 6"});
             this.comboBox_effect2Aura.Location = new System.Drawing.Point(617, 280);
             this.comboBox_effect2Aura.Name = "comboBox_effect2Aura";
             this.comboBox_effect2Aura.Size = new System.Drawing.Size(215, 28);
@@ -987,7 +993,10 @@
             "AURA_NONE - 0",
             "AURA_MOD_STAT - 1",
             "AURA_PERIODIC_DAMAGE - 2",
-            "AURA_PERIODIC_HEAL - 3"});
+            "AURA_PERIODIC_HEAL - 3",
+            "AURA_MOD_MOVEMENT_SPEED - 4",
+            "AURA_MOD_DMG_TAKEN - 5",
+            "AURA_MOD_STUN - 6"});
             this.comboBox_effect3Aura.Location = new System.Drawing.Point(617, 280);
             this.comboBox_effect3Aura.Name = "comboBox_effect3Aura";
             this.comboBox_effect3Aura.Size = new System.Drawing.Size(215, 28);
