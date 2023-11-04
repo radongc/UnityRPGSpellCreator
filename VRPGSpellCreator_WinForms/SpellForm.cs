@@ -76,6 +76,10 @@ namespace VRPGSpellCreator_WinForms
             int effectApplyAura2 = GetEnumID(comboBox_effect2Aura.Text);
             int effectApplyAura3 = GetEnumID(comboBox_effect3Aura.Text);
 
+            string effectAmplitude1 = textBox_AuraAmplitude1.Text;
+            string effectAmplitude2 = textBox_AuraAmplitude2.Text;
+            string effectAmplitude3 = textBox_AuraAmplitude3.Text;
+
             int effectTarget2 = GetEnumID(comboBox_Effect2Target.Text);
             int effectTarget3 = GetEnumID(comboBox_Effect3Target.Text);
 
@@ -90,10 +94,11 @@ namespace VRPGSpellCreator_WinForms
 
             string hiddenAura = checkBox_hiddenAura.Checked ? "1" : "0";
             string harmfulAura = checkBox_harmfulAura.Checked ? "1" : "0";
+            string stackableAura = checkBox_Stackable.Checked ? "1" : "0";
 
             int castAnimation = GetEnumID(comboBox_Animation.Text);
 
-            string sql = $"REPLACE INTO \"main\".\"spell\" (\"ID\", \"Name\", \"Description\", \"Tooltip\", \"IconID\", \"Cooldown\", \"PowerCost\", \"Duration\", \"CastType\", \"DirectTarget\", \"SecondaryTarget\", \"Effect1\", \"Effect2\", \"Effect3\", \"EffectBasePoints1\", \"EffectBasePoints2\", \"EffectBasePoints3\", \"EffectDieSides1\", \"EffectDieSides2\", \"EffectDieSides3\", \"EffectMiscValue1\", \"EffectMiscValue2\", \"EffectMiscValue3\", \"EffectApplyAura1\", \"EffectApplyAura2\", \"EffectApplyAura3\", \"EffectTarget2\", \"EffectTarget3\", \"Range_Min\", \"Range_Max\", \"MeleeAbility\", \"Visual1\", \"Visual2\", \"AuraStartVisual\", \"AuraVisual\", \"HiddenAura\", \"HarmfulAura\", \"CastAnimation\") VALUES ('{spellId}', '{name}', '{description}', '{tooltip}', '{iconId}', '{cooldown}', '{powerCost}', '{duration}', '{castType}', '{directTarget}', '{secondaryTarget}', '{effect1}', '{effect2}', '{effect3}', '{effectBasePoints1}', '{effectBasePoints2}', '{effectBasePoints3}', '{effectDieSides1}', '{effectDieSides2}', '{effectDieSides3}', '{effectMiscValue1}', '{effectMiscValue2}', '{effectMiscValue3}', '{effectApplyAura1}', '{effectApplyAura2}', '{effectApplyAura3}', '{effectTarget2}', '{effectTarget3}', '{rangeMin}', '{rangeMax}', '{meleeAbility}', '{visual1}', '{visual2}', '{auraStartVisual}', '{auraVisual}', '{hiddenAura}', '{harmfulAura}', '{castAnimation}');";
+            string sql = $"REPLACE INTO \"main\".\"spell\" (\"ID\", \"Name\", \"Description\", \"Tooltip\", \"IconID\", \"Cooldown\", \"PowerCost\", \"Duration\", \"CastType\", \"DirectTarget\", \"SecondaryTarget\", \"Effect1\", \"Effect2\", \"Effect3\", \"EffectBasePoints1\", \"EffectBasePoints2\", \"EffectBasePoints3\", \"EffectDieSides1\", \"EffectDieSides2\", \"EffectDieSides3\", \"EffectMiscValue1\", \"EffectMiscValue2\", \"EffectMiscValue3\", \"EffectApplyAura1\", \"EffectApplyAura2\", \"EffectApplyAura3\", \"EffectAmplitude1\", \"EffectAmplitude2\", \"EffectAmplitude3\", \"EffectTarget2\", \"EffectTarget3\", \"Range_Min\", \"Range_Max\", \"MeleeAbility\", \"Visual1\", \"Visual2\", \"AuraStartVisual\", \"AuraVisual\", \"HiddenAura\", \"HarmfulAura\", \"CastAnimation\") VALUES ('{spellId}', '{name}', '{description}', '{tooltip}', '{iconId}', '{cooldown}', '{powerCost}', '{duration}', '{castType}', '{directTarget}', '{secondaryTarget}', '{effect1}', '{effect2}', '{effect3}', '{effectBasePoints1}', '{effectBasePoints2}', '{effectBasePoints3}', '{effectDieSides1}', '{effectDieSides2}', '{effectDieSides3}', '{effectMiscValue1}', '{effectMiscValue2}', '{effectMiscValue3}', '{effectApplyAura1}', '{effectApplyAura2}', '{effectApplyAura3}', '{effectAmplitude1}', '{effectAmplitude2}', '{effectAmplitude3}', '{effectTarget2}', '{effectTarget3}', '{rangeMin}', '{rangeMax}', '{meleeAbility}', '{visual1}', '{visual2}', '{auraStartVisual}', '{auraVisual}', '{hiddenAura}', '{harmfulAura}', '{castAnimation}');";
             return sql;
         }
 
